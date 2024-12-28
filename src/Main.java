@@ -5,31 +5,15 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		// estrutura while
-		int x = sc.nextInt();
-		
-		while (x != 0) {
-			System.out.println("Você digitou: "+x);
-			x = sc.nextInt();
-		}
-		
-		// estrutura for
-		int soma = 0;
+		// operações bit a bit (bitwise)
+		int mask = 0b100000;
 		int n = sc.nextInt();
 		
-		for (int i=0; i < n; i++) {
-			int p = sc.nextInt();
-			soma = soma + p;
+		if ((n & mask) != 0) {
+			System.out.println("6th bit is true");
+		} else {
+			System.out.println("6th bit is false");
 		}
-		System.out.println("Você somou: "+soma);
-		
-		// estrutura do-while
-		int inc = 0;
-		
-		do {
-			inc = inc + 1;
-			System.out.println("Incremento: "+inc);
-		} while (inc < 3);
 			
 		sc.close();
 	}

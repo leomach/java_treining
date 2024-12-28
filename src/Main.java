@@ -1,37 +1,27 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		String product1 = "Computer";
-		String product2 = "Office desk";
-		
-		int age = 30;
-		int code = 5290;
-		char gender = 'F';
-		
-		double price1 = 2100.0;
-		double price2 = 650.50;
-		double measure = 53.2345677;
-		
-		System.out.println("Products:");
-		System.out.printf("%s, which price is $ %.2f%n", product1, price1);
-		System.out.printf("%s, which price is $ %.2f%n%n", product2, price2);
-		System.out.printf("Record: %d years old, code %d and gender: %s%n%n", age, code, gender);
-		System.out.printf("Measue with eigth decimal places: %.8f%n", measure);
-		System.out.printf("Rouded (three decimal places): %.3f%n", measure);
-		
-		Locale.setDefault(Locale.US);
-		
-		System.out.printf("US decimal point: %.3f%n", measure);
-		
 		Scanner sc = new Scanner(System.in);
 		
-		String x;
-		x = sc.next();
-		System.out.println("Você digitou: "+x);
+		int x = sc.nextInt();
 		
+		while (x != 0) {
+			System.out.println("Você digitou: "+x);
+			x = sc.nextInt();
+		}
+		
+		// estrutura for
+		int soma = 0;
+		int n = sc.nextInt();
+		
+		for (int i=0; i < n; i++) {
+			int p = sc.nextInt();
+			soma = soma + p;
+		}
+		System.out.println("Você somou: "+soma);
+			
 		sc.close();
 	}
 
